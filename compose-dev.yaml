@@ -1,0 +1,20 @@
+services:
+  4give:
+    image: node:20.5.1
+    command:
+      - /bin/bash
+      - -c 
+      - "cd /app && npm run dev"
+    user: ${MY_UID}:${MY_GID}
+    volumes:
+      - ./4give:/app
+
+  4give-api:
+    image: node:20.5.1
+    command:
+      - /bin/bash
+      - -c 
+      - "cd /app && npm run start:dev"
+    user: ${MY_UID}:${MY_GID}
+    volumes:
+      - ./4give-api:/app

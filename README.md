@@ -32,3 +32,19 @@ JWT_SECRET=...
 VERSION_API=v0.0.1
 VERSION_FRONTEND=v0.0.1
 ```
+
+# Development
+
+Clone projects:
+```
+./init-dev.sh
+```
+
+Will download the two main components (frontend, backend).
+
+Run the start command:
+```
+./start-dev.sh
+```
+
+Connect to http://127.0.0.1/
