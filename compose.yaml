@@ -63,7 +63,7 @@ services:
       - "docker.project=4give"
       - "traefik.enable=true"
       - "traefik.http.routers.4give.entrypoints=web"
-      - "traefik.http.routers.4give.rule=${TRAEFIK_DOMAIN} PathPrefix(`/`)"
+      - "traefik.http.routers.4give.rule=PathPrefix(`/`)"
       - "traefik.http.services.4give.loadbalancer.server.port=3000"
 
   4give-api:
@@ -75,7 +75,7 @@ services:
       - "docker.project=4give"
       - "traefik.enable=true"
       - "traefik.http.routers.4give-api.entrypoints=web"
-      - "traefik.http.routers.4give-api.rule=${TRAEFIK_DOMAIN} PathPrefix(`/api/v1`)"
+      - "traefik.http.routers.4give-api.rule=PathPrefix(`/api/v1`)"
       - "traefik.http.services.4give-api.loadbalancer.server.port=3000"
     environment:
       - "PORT=3000"
